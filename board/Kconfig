@@ -28,6 +28,13 @@ menu "Device Support"
 		help
 		  Say Y if you want to include support for Samsung Galaxy S6
 
+	config SAMSUNG_ZEROLTE
+		bool "Support for Samsung Galaxy S6 edge"
+		default n
+		depends on EXYNOS_7420
+		help
+		  Say Y if you want to include support for Samsung Galaxy S6 edge
+
 	config SAMSUNG_DREAMLTE
 		bool "Support for Samsung Galaxy S8"
 		default n
@@ -52,6 +59,7 @@ menu "Device Specific Addresses"
 		default 0x050000000 if SAMSUNG_NOBLELTE
 		default 0x090000000 if SAMSUNG_JACKPOTLTE
 		default 0x090000000 if SAMSUNG_ZEROFLTE
+		default 0x090000000 if SAMSUNG_ZEROLTE
 		default 0x090000000 if SAMSUNG_DREAMLTE
 		default 0x090000000 if SAMSUNG_STARLTE
 
@@ -62,6 +70,7 @@ menu "Device Specific Addresses"
 		default 0x0e2a00000 if SAMSUNG_NOBLELTE
 		default 0x0ec000000 if SAMSUNG_JACKPOTLTE
 		default 0x0e2a00000 if SAMSUNG_ZEROFLTE
+		default 0x0e2a00000 if SAMSUNG_ZEROLTE
 		default 0x0cc000000 if SAMSUNG_DREAMLTE
 		default 0x0cc000000 if SAMSUNG_STARLTE
 
@@ -72,6 +81,7 @@ menu "Device Specific Addresses"
 		default 1440 if SAMSUNG_NOBLELTE
 		default 1080 if SAMSUNG_JACKPOTLTE
 		default 1440 if SAMSUNG_ZEROFLTE
+		default 1440 if SAMSUNG_ZEROLTE
 		default 1440 if SAMSUNG_DREAMLTE
 		default 1440 if SAMSUNG_STARLTE
 
@@ -82,6 +92,7 @@ menu "Device Specific Addresses"
 		default 2560 if SAMSUNG_NOBLELTE
 		default 2220 if SAMSUNG_JACKPOTLTE
 		default 2560 if SAMSUNG_ZEROFLTE
+		default 2560 if SAMSUNG_ZEROLTE
 		default 2960 if SAMSUNG_DREAMLTE
 		default 2960 if SAMSUNG_STARLTE
 
@@ -92,6 +103,7 @@ menu "Device Specific Addresses"
 		default 4 if SAMSUNG_NOBLELTE
 		default 4 if SAMSUNG_JACKPOTLTE
 		default 4 if SAMSUNG_ZEROFLTE
+		default 4 if SAMSUNG_ZEROLTE
 		default 4 if SAMSUNG_DREAMLTE
 		default 4 if SAMSUNG_STARLTE
 
